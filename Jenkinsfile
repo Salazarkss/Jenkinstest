@@ -6,7 +6,7 @@ pipeline {
 
     agent {
     	docker{
-    		label: 'docker',
+    		label: 'docker'
     		image 'maven:3.3.3'
     	}
     }
