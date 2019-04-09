@@ -1,4 +1,10 @@
-FROM jenkins
+FROM jenkins/jenkins:lts-alpine
 USER root
-RUN apt-get update && apt-get install -y docker.io 99 && rm -rf /var/lib/apt/lists/*
-user jenkins
+RUN apk add \
+ docker \
+ shadow
+RUN usermod -aG docker jenkins
+USER jenkins
+COPY plugins.txt /usr/share/jenkins/ref/plugins.txt
+RUN /usr/local/bin/install-plugins.sh < /usr/share/jenkins/ref/plugins.txt
+ENV JAVA_OPTS="-Djenkins.install.runSetupWizard=false"
