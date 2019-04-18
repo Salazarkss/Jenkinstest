@@ -5,13 +5,8 @@ pipeline {
         stage ('Compile Stage') {
             steps{
                 withMaven(maven : 'maven_3_6_0'){
-                    bat 'mvn clean package'
+                    bat 'mvn clean package && gcloud --version'
                 }
-            }
-        }
-        stage ('Deploy') {
-            steps {
-                sh 'gcloud --version'
             }
         }
     }
