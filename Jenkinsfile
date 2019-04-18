@@ -9,5 +9,12 @@ pipeline {
                 }
             }
         }
+        stage ('Deploy') {
+            steps {
+                withEnv(['GCLOUD_PATH=C:\Users\Sebastian\AppData\Local\Google\Cloud SDK\google-cloud-sdk\bin']) {
+                    sh '$GCLOUD_PATH/gcloud --version'
+                }
+            }
+        }
     }
 }
