@@ -5,7 +5,7 @@ pipeline {
         stage ('Compile Stage') {
             steps{
                 withMaven(maven : 'maven_3_6_0'){
-                    bat 'mvn clean package && mvn appengine:deploy'
+                    bat 'mvn clean package && mvn appengine:deploy -Dapp.deploy.deployables=app.yaml'
                 }
             }
         }
