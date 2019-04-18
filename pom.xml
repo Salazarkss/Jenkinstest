@@ -40,6 +40,12 @@
               <groupId>com.google.cloud.tools</groupId>
               <artifactId>appengine-maven-plugin</artifactId>
               <version>1.3.2</version>
+              <configuration>
+                <stage.enableJarSplitting>true</stage.enableJarSplitting>
+                <deploy.stopPreviousVersion>true</deploy.stopPreviousVersion>
+                <cloudSdkPath>C:\Users\Sebastian\AppData\Local\Google\Cloud SDK</cloudSdkPath>
+              </configuration>
+
             </plugin>
             <plugin>
                 <artifactId>maven-compiler-plugin</artifactId>
