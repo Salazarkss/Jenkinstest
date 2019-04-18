@@ -11,7 +11,7 @@ pipeline {
         }
         stage ('Deploy') {
             steps {
-                bat 'gclod --version'
+                bat 'gcloud --version'
             }
         }
     }
