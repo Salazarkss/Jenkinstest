@@ -43,7 +43,7 @@
               <configuration>
                 <stage.enableJarSplitting>true</stage.enableJarSplitting>
                 <deploy.stopPreviousVersion>true</deploy.stopPreviousVersion>
-                <cloudSdkPath>C:\Users\Sebastian\AppData\Local\Google\Cloud SDK</cloudSdkPath>
+                <cloudSdkPath>C:\Users\Sebastian\AppData\Local\Google\Cloud SDK\google-cloud-sdk</cloudSdkPath>
               </configuration>
 
             </plugin>
